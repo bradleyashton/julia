@@ -21,19 +21,7 @@ Tasks
 
    In this example, ``b`` is a runnable ``Task`` that hasn't started yet.
 
-<<<<<<< HEAD
 .. function:: yieldto(t::Task, arg = nothing)
-=======
-   .. doctest::
-
-       julia> a() = det(rand(1000, 1000));
-
-       julia> b = Task(a);
-
-   In this example, ``b`` is a runnable ``Task`` that hasn't started yet.
-
-.. function:: yieldto(task, arg = nothing)
->>>>>>> Update docstrings and add doctests for task-related functions
 
    .. Docstring generated from Julia source
 
@@ -61,6 +49,8 @@ Tasks
        false
 
        julia> schedule(b);
+
+       julia> yield();
 
        julia> istaskdone(b)
        true
@@ -202,6 +192,8 @@ Tasks
        false
 
        julia> schedule(b);
+
+       julia> yield();
 
        julia> istaskdone(b)
        true
